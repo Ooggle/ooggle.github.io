@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(236, 236, 236);
+}
+
+p{
+    padding: 15px;
+    margin: 0;
+}
+
+#site-root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#site-navbar{
+    position: sticky;
+    top: 0;
+    width: 600px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    
+}
+
+#site-content{
+    width: 600px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+
+/* SPECIFIC */
+
