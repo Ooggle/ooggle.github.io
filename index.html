@@ -19,13 +19,13 @@
 
             <!-- Sticky navbar -->
             <div id="site-navbar">
-                <a href="#"><p id="site-navbar-title">Ooggle</p></a>
-                <a href="#hobbies"><p class="site-navbar-cat">Hobbies</p></a>
-                <a href="#work"><p class="site-navbar-cat">Work</p></a>
-                <a href="#contact"><p class="site-navbar-cat" id="site-navbar-last-cat">Contact</p></a>
+                <a onclick="scrollSmoothTo('top')"><p id="site-navbar-title">Ooggle</p></a>
+                <a onclick="scrollSmoothTo('hobbies')"><p class="site-navbar-cat">Hobbies</p></a>
+                <a onclick="scrollSmoothTo('work')"><p class="site-navbar-cat">Work</p></a>
+                <a onclick="scrollSmoothTo('contact')"><p class="site-navbar-cat" id="site-navbar-last-cat">Contact</p></a>
             </div>
             <div class="markdown-body">
-                <h2 style="padding-top: 20px">About me.</h2>
+                <h2 id="about-me" style="padding-top: 20px">About me.</h2>
                 <p>Hello, i'm a French student, developper and cyber-security enthusiast who love to learn new things.</p>
                 <p>I made a lot of development projects especially with PHP in the past.<br>
                 Now I am more into low level languages like C or assembly.</p>
@@ -37,7 +37,7 @@
                 <p>As I use Linux as my primary operating system, I went through the fundamental question: witch distribution use?</p>
                 <p>From this, I have started customize my new fresh Debian install by installing from scratch the X Server, Window Manager, notifications deamon et cetera. Dealing with config files and stuff like that.</p>
                 <p>Today, I still improve my skills in this domain and that's partly what made me decide to write my own kernel.</p>
-                <em>Me actually writting this site from my battlestation!</em>
+                <em>Me actually writting this site from my i3wm battlestation!</em>
                 <img src="assets/img/code.png" alt="code">
 
                 <h4>CTFs</h4>
@@ -54,16 +54,17 @@
 
 
                 <h2 id="work" class="top-spacing">Work</h2>
-                <h3>Under development...</h3>
+                <p>If your searching for my portfolio, this is not the right place, consider checking my Github where there is not all but some of my open source projects! I also have <a href="https://ooggle.github.io/thewebfreelance/portfolio.html">TheWebFreelance</a> which is a fake web company website that i have made for training purposes. The page Portfolio resume all of my "professional" websites.</p>
                 <!-- <em>Template portfolio website</em>
                 <img src="assets/img/thewebfreelance.png" alt="thewebfreelance">
                 <br><br>
                 <em>The boot screen of my kernel at <a href="https://github.com/Ooggle/OS-exclamation-mark">this address.</a></em>
                 <img src="assets/img/kernel.png" alt="kernel development"> -->
+                <h3>Under development...</h3>
 
                 <h2 id="contact" class="top-spacing">Contact</h2>
-                <p>You can found me on Twitter at <a href="https://twitter.com/Ooggule">@Ooggule</a> where I am pretty active but you can also found me on Discord : @Ooggle#2362.<br>
-                Finally, you can from time to time found me in some IRC channels like <code>#root-me</code> at <a href="https://www.root-me.org/spip.php?page=webirc">irc.root-me.org</a>, or <code>#osdev</code>, <code>##adventofcode</code>, <code>##asm</code>, <code>##C++-general</code> at <a href="https://webchat.freenode.net/">chat.freenode.net</a>.</p>
+                <p>You can found me on Twitter at <a href="https://twitter.com/Ooggule">@Ooggule</a> where I am pretty active but you can also found me on Discord : @Ooggle#2362.</p>
+                <p>Finally, you can from time to time found me in some IRC channels like <code>#root-me</code> at <a href="https://www.root-me.org/spip.php?page=webirc">irc.root-me.org</a>, or <code>#osdev</code>, <code>##adventofcode</code>, <code>##asm</code>, <code>##C++-general</code> at <a href="https://webchat.freenode.net/">chat.freenode.net</a>.</p>
                 <p>Have a nice day! o/</p>
 
                 <br>
@@ -75,5 +76,19 @@
         </footer>
     </div>
     <script src="assets/js/index.js"></script>
+    <script>
+        function scrollSmoothTo(elementId) {
+            if (elementId == 'top') {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } else {
+                var element = document.getElementById(elementId);
+                element.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
 </body>
 </html>
