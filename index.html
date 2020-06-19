@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ooggle page!</title>
+    <title>Ooggle webpage!</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <!-- Assets -->
     <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/github-markdown.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -15,36 +19,46 @@
 
             <!-- Sticky navbar -->
             <div id="site-navbar">
-                <p>Ooggle</p>
+                <a href="#"><p id="site-navbar-title">Ooggle</p></a>
+                <a href="#hobbies"><p class="site-navbar-cat">Hobbies</p></a>
+                <a href="#work"><p class="site-navbar-cat">Work</p></a>
+                <a href="#contact"><p class="site-navbar-cat" id="site-navbar-last-cat">Contact</p></a>
             </div>
-            
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
-            <p>some padding</p><br><br>
+            <div class="markdown-body">
+                <h2>About me.</h2>
+                <p>Hello, i'm a French student, developper and cyber-security enthusiast who love to learn new things.</p>
+                <p>I made a lot of development projects especially with PHP in the past.<br>
+                Now I am more into low level languages like C or assembly.</p>
+                <p>I also like to learn some new stuff, I recently started kernel development which is really interesting and SDL2 to make some 2D multiplatform graphic apps.</p>
+
+                <h2 id="hobbies" class="top-spacing">Hobbies</h2>
+                <p>I sometimes manage to play games. I love to play at some rythm games like Osu! or StepMania.</p>
+                <p>Recently, one of my friends initiated me to the Final fantasy serie so I started playing at FF9 which is a very cool game!</p>
+                <em>Final Fantasy IX on Switch</em>
+                <img src="assets/img/ff9.jpg" alt="ff9">
+
+                <h2 id="work" class="top-spacing">Work</h2>
+                <h3>Under development...</h3>
+                <!-- <em>Template portfolio website</em>
+                <img src="assets/img/thewebfreelance.png" alt="thewebfreelance">
+                <br><br>
+                <em>The boot screen of my kernel at <a href="https://github.com/Ooggle/OS-exclamation-mark">this address.</a></em>
+                <img src="assets/img/kernel.png" alt="kernel development"> -->
+
+                <h2 id="contact" class="top-spacing">Contact</h2>
+                <p>You can found me on Twitter at <a href="https://twitter.com/Ooggule" target="_blank">@Ooggule</a> where I am pretty active but you can also found me on Discord : @Ooggle#2362.<br>
+                Finally, you can from time to time found me in some IRC channels like <code>#root-me</code> at <a href="https://www.root-me.org/spip.php?page=webirc" target="_blank">irc.root-me.org</a>, or <code>#osdev</code>, <code>##adventofcode</code>, <code>##asm</code>, <code>##C++-general</code> at <a href="https://webchat.freenode.net/">chat.freenode.net</a>.</p>
+                <p>Have a nice day! o/</p>
+
+                <br>
+            </div>
         </div>
+        <br><br><br><br>
+        <footer>
+            <p>Made with <span style="color: red;">❤</span> by <a href="https://github.com/Ooggle">Ooggle</a> - 2020</p>
+        </footer>
     </div>
+    <script src="assets/js/markdown-it.min.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 </html>

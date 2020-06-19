@@ -1,29 +1,24 @@
 *{
     box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
 body{
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(248, 248, 248);
 }
 
 p{
-    padding: 15px;
     margin: 0;
+}
+
+a, a:hover, a:active{
+    color: initial;
 }
 
 #site-root{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#site-navbar{
-    position: sticky;
-    top: 0;
-    width: 600px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    
 }
 
 #site-content{
@@ -34,6 +29,58 @@ p{
     box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
 }
 
+.top-spacing{
+    padding-top: 60px;
+}
 
-/* SPECIFIC */
+/* NAVBAR */
 
+#site-navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    transition-duration: 0.1s;
+    transition-property: box-shadow;
+}
+
+#site-navbar a:nth-child(1){
+    margin-right: auto;
+}
+
+#site-navbar a p{
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px;
+}
+
+#site-navbar p:hover{
+    background-color: rgb(219, 219, 219);
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+/* MARKDOWN CONTENT */
+
+.markdown-body{
+    margin: 10px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 700px) {
+    #site-content{
+        width: 98%;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
