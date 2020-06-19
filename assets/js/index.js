@@ -1,5 +1,10 @@
 document.addEventListener("scroll", scrollcheck);
 
+/* Verify scroll status at loading */
+window.onload = function(){
+    scrollcheck();
+};
+
 /* shadow navbar on scroll */
 function scrollcheck() {
     if(window.pageYOffset > 20) {
