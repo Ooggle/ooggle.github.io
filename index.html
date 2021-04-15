@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ooggle webpage!</title>
+    <title>Ooggle - Cyber - Reverse - Low level programming</title>
+	<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/33269056?s=400&v=4">
+	
+	<!-- description -->
+	<meta name="description" content="Ooggle personal website"/>
+	
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="Ooggle">
+	<meta property="og:title" content="Ooggle website - Cyber - Reverse - Low level programming">
+	<meta property="og:image" content="https://avatars.githubusercontent.com/u/33269056?s=400&v=4">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -14,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+	<div id="site-background"></div>
     <div id="site-root">
         <div id="site-content">
 
@@ -90,7 +100,23 @@
             }
         }
         
-        document.getElementById("current-year").innerHTML = new Date().getFullYear();
-    </script>
+        
+    
+		document.addEventListener("DOMContentLoaded", (event) => {
+		
+			// display current year
+			document.getElementById("current-year").innerHTML = new Date().getFullYear();
+		
+			// random wallpaper
+			let wall = ['escheresque_@2X.png', 'funky-lines.png', 'gplaypattern_@2X.png', 'memphis-colorful.png', 'memphis-mini.png'];
+			document.getElementById("site-background").style.backgroundImage = "url('assets/img/" + wall[Math.floor((Math.random() * wall.length))] + "')";
+			
+			setTimeout(function(){
+				document.getElementById("site-background").style.opacity = 1;
+			}, 100);
+		});
+
+		
+	</script>
 </body>
 </html>
